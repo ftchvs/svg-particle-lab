@@ -9,13 +9,13 @@ particles settle, the animation loop stops.
 
 ## Demo recordings
 
-<video src="./docs/media/svg-particle-lab-import-demo.mov" controls width="100%" title="SVG import and particle render demo"></video>
+<video src="./docs/media/svg-particle-lab-import-demo.mp4" controls width="100%" title="SVG import and particle render demo"></video>
 
-[Open SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.mov)
+[Open SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.mp4)
 
-<video src="./docs/media/svg-particle-lab-controls-demo.mov" controls width="100%" title="Controls and export demo"></video>
+<video src="./docs/media/svg-particle-lab-controls-demo.mp4" controls width="100%" title="Controls and export demo"></video>
 
-[Open controls and export demo](./docs/media/svg-particle-lab-controls-demo.mov)
+[Open controls and export demo](./docs/media/svg-particle-lab-controls-demo.mp4)
 
 ## Why this exists
 
