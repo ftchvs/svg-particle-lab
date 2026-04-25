@@ -5,6 +5,8 @@ rasterizing it in the browser, and rendering it as thousands of interactive 2D
 canvas particles. Hover pushes the dots apart. Click fires a shockwave. When the
 particles settle, the animation loop stops.
 
+[Try the live demo](https://www.ftchvs.com/en/svg-particle-lab)
+
 ![SVG Particle Lab demo screenshot](./docs/media/svg-particle-lab-screenshot.png)
 
 ## Demo recordings
