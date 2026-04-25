@@ -7,13 +7,7 @@ particles settle, the animation loop stops.
 
 [Try the live demo](https://www.ftchvs.com/en/svg-particle-lab)
 
-![SVG Particle Lab demo screenshot](./docs/media/svg-particle-lab-screenshot.png)
-
 ## Demo recordings
-
-[![SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.gif)](./docs/media/svg-particle-lab-import-demo.mp4)
-
-[Open SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.mp4)
 
 [![Controls and export demo](./docs/media/svg-particle-lab-controls-demo.gif)](./docs/media/svg-particle-lab-controls-demo.mp4)
 
