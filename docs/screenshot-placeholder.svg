@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SVG Particle Lab screenshot placeholder</title>
+  <desc id="desc">A neutral placeholder showing where a demo screenshot or animation should be added.</desc>
+  <rect width="1200" height="720" fill="#f5f3ee"/>
+  <rect x="64" y="64" width="760" height="592" fill="#fbfaf7" stroke="#d7d1c6"/>
+  <g fill="#171717">
+    <circle cx="360" cy="220" r="5"/>
+    <circle cx="390" cy="212" r="5"/>
+    <circle cx="420" cy="220" r="5"/>
+    <circle cx="330" cy="250" r="5"/>
+    <circle cx="360" cy="250" r="5"/>
+    <circle cx="390" cy="250" r="5"/>
+    <circle cx="420" cy="250" r="5"/>
+    <circle cx="450" cy="250" r="5"/>
+    <circle cx="320" cy="282" r="5"/>
+    <circle cx="352" cy="286" r="5"/>
+    <circle cx="384" cy="290" r="5"/>
+    <circle cx="416" cy="286" r="5"/>
+    <circle cx="448" cy="282" r="5"/>
+  </g>
+  <g fill="#db2777">
+    <circle cx="530" cy="292" r="5"/>
+    <circle cx="552" cy="318" r="5"/>
+    <circle cx="558" cy="350" r="5"/>
+    <circle cx="540" cy="380" r="5"/>
+  </g>
+  <g fill="#f59e0b">
+    <circle cx="302" cy="340" r="5"/>
+    <circle cx="324" cy="374" r="5"/>
+    <circle cx="360" cy="402" r="5"/>
+    <circle cx="406" cy="416" r="5"/>
+  </g>
+  <rect x="864" y="64" width="272" height="96" fill="#fff" stroke="#d7d1c6"/>
+  <rect x="864" y="184" width="272" height="96" fill="#fff" stroke="#d7d1c6"/>
+  <rect x="864" y="304" width="272" height="96" fill="#fff" stroke="#d7d1c6"/>
+  <text x="96" y="104" fill="#6f6b64" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">PREVIEW</text>
+  <text x="864" y="48" fill="#6f6b64" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">CONTROLS</text>
+  <text x="96" y="624" fill="#6f6b64" font-family="Inter, Arial, sans-serif" font-size="24">Replace with a live screenshot or GIF after the first release.</text>
+</svg>

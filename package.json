@@ -1,0 +1,65 @@
+{
+  "name": "svg-particle-lab",
+  "version": "0.1.0",
+  "description": "Turn any SVG into an interactive dithered particle canvas.",
+  "type": "module",
+  "private": false,
+  "author": "Felipe Chaves",
+  "license": "MIT",
+  "homepage": "https://github.com/ftchvs/svg-particle-lab#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftchvs/svg-particle-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ftchvs/svg-particle-lab/issues"
+  },
+  "keywords": [
+    "svg",
+    "particles",
+    "canvas",
+    "react",
+    "dithered",
+    "interactive",
+    "logo"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "module": "./dist/svg-particle-lab.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/svg-particle-lab.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.31.0",
+    "vite": "^7.2.7"
+  }
+}
