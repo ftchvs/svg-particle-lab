@@ -7,6 +7,11 @@ particles settle, the animation loop stops.
 
 ![SVG Particle Lab screenshot placeholder](./docs/screenshot-placeholder.svg)
 
+## Demo recordings
+
+- [SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.mov)
+- [Controls and export demo](./docs/media/svg-particle-lab-controls-demo.mov)
+
 ## Why this exists
 
 SVGs are easy to ship, but most particle treatments require hand-authored
