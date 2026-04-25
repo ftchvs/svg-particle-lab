@@ -11,11 +11,11 @@ particles settle, the animation loop stops.
 
 ## Demo recordings
 
-<video src="./docs/media/svg-particle-lab-import-demo.mp4" controls width="100%" title="SVG import and particle render demo"></video>
+[![SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.gif)](./docs/media/svg-particle-lab-import-demo.mp4)
 
 [Open SVG import and particle render demo](./docs/media/svg-particle-lab-import-demo.mp4)
 
-<video src="./docs/media/svg-particle-lab-controls-demo.mp4" controls width="100%" title="Controls and export demo"></video>
+[![Controls and export demo](./docs/media/svg-particle-lab-controls-demo.gif)](./docs/media/svg-particle-lab-controls-demo.mp4)
 
 [Open controls and export demo](./docs/media/svg-particle-lab-controls-demo.mp4)
 
