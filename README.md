@@ -3,7 +3,8 @@
 `svg-particle-lab` is a React component and demo lab for importing SVG artwork,
 rasterizing it in the browser, and rendering it as thousands of interactive 2D
 canvas particles. Hover pushes the dots apart. Click fires a shockwave. When the
-particles settle, the animation loop stops.
+particles settle, the animation loop stops. Users who prefer reduced motion get
+the same static particle render without pointer-driven motion.
 
 [Try the live demo](https://www.ftchvs.com/en/svg-particle-lab)
 
@@ -43,6 +44,7 @@ export function LogoParticles() {
       grid={256}
       fit="contain"
       size={360}
+      onError={(error) => console.error(error)}
       aria-label="Logo particle preview"
     />
   );
@@ -72,6 +74,7 @@ controls, render stats, JSX snippet copying, and JSON preset export.
 | `className` | `string` | `undefined` | Class applied to the wrapper element. |
 | `style` | `CSSProperties` | `undefined` | Inline styles merged onto the wrapper element. |
 | `onStats` | `(stats) => void` | `undefined` | Called after extraction with particle count, color count, and grid size. |
+| `onError` | `(error) => void` | `undefined` | Called when the SVG cannot be loaded or rasterized. |
 | `aria-label` | `string` | `"Dithered SVG particle canvas"` | Accessible label for the visual. |
 
 ```ts
@@ -99,6 +102,8 @@ type DitheredSvgStats = {
 - Buckets particles by quantized color to avoid one `fillStyle` change per dot.
 - Filters hover work to mouse pointers; touch still gets click/tap shockwaves.
 - Snaps tiny displacements to zero so idle CPU returns to zero after motion.
+- Respects `prefers-reduced-motion: reduce` by rendering the static particle
+  field without attaching pointer animation handlers.
 
 ## Accessibility
 
@@ -114,15 +119,24 @@ expectations for labels, keyboard controls, reduced motion, and docs are in
   Prefer same-origin assets or object URLs from local uploads.
 - Very large or complex SVGs should use a lower `grid` value first.
 - The renderer currently targets square canvases.
+- This package does not sanitize untrusted SVGs. Validate and sanitize uploaded
+  or remote SVG content before using it in production flows.
 
 ## Development
 
 ```bash
 npm install
+npm run verify
 npm run typecheck
 npm run build
 npm run lint
 ```
+
+`npm run verify` is the CI path and runs typecheck, lint, and build.
+
+## Security
+
+See [SECURITY.md](./SECURITY.md) for reporting and SVG handling boundaries.
 
 ## License
 

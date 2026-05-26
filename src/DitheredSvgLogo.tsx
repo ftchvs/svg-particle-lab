@@ -33,6 +33,7 @@ export type DitheredSvgLogoProps = {
   className?: string;
   style?: CSSProperties;
   onStats?: (stats: DitheredSvgStats) => void;
+  onError?: (error: Error) => void;
   'aria-label'?: string;
 };
 
@@ -223,6 +224,7 @@ export function DitheredSvgLogo({
   className,
   style,
   onStats,
+  onError,
   ...rest
 }: DitheredSvgLogoProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -235,6 +237,9 @@ export function DitheredSvgLogo({
     let cancelled = false;
     let rafId: number | null = null;
     let extracted: Extracted | null = null;
+    const reducedMotion =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     canvas.removeAttribute('data-ready');
     canvas.style.opacity = '0';
 
@@ -381,13 +386,19 @@ export function DitheredSvgLogo({
           colorCount: nextExtracted.colors.length,
           grid: nextExtracted.grid,
         });
-        canvas.addEventListener('pointermove', onMove);
-        canvas.addEventListener('pointerleave', onLeave);
-        canvas.addEventListener('pointerup', onUp);
+        if (!reducedMotion) {
+          canvas.addEventListener('pointermove', onMove);
+          canvas.addEventListener('pointerleave', onLeave);
+          canvas.addEventListener('pointerup', onUp);
+        }
         window.addEventListener('resize', onResize);
         kick();
       } catch (error) {
-        console.error('[DitheredSvgLogo] failed to load SVG:', svgSrc, error);
+        if (cancelled) return;
+        const normalizedError =
+          error instanceof Error ? error : new Error('Failed to load SVG particle source.');
+        onError?.(normalizedError);
+        console.error('[DitheredSvgLogo] failed to load SVG:', svgSrc, normalizedError);
       }
     })();
 
@@ -399,7 +410,7 @@ export function DitheredSvgLogo({
       canvas.removeEventListener('pointerup', onUp);
       window.removeEventListener('resize', onResize);
     };
-  }, [fit, grid, onStats, svgSrc]);
+  }, [fit, grid, onError, onStats, svgSrc]);
 
   const dim = size ? { width: `min(${size}px, 100%)` } : undefined;
 
