@@ -12,9 +12,7 @@ npm run dev
 Before opening a pull request, run:
 
 ```bash
-npm run typecheck
-npm run build
-npm run lint
+npm run verify
 ```
 
 ## Good first areas

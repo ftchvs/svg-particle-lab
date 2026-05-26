@@ -99,6 +99,17 @@ function App() {
     if (inputRef.current) inputRef.current.value = '';
   };
 
+  const handleStats = useCallback((nextStats: DitheredSvgStats) => {
+    setStats(nextStats);
+    setError(null);
+  }, []);
+
+  const handleRenderError = useCallback((renderError: Error) => {
+    setStats(null);
+    setMessage(null);
+    setError(renderError.message);
+  }, []);
+
   const assetPath = source.uploaded ? `/path/to/${source.name}` : DEFAULT_SVG;
   const codeSnippet = useMemo(
     () => `<DitheredSvgLogo
@@ -172,7 +183,8 @@ function App() {
             grid={grid}
             fit={fit}
             size={displaySize}
-            onStats={setStats}
+            onStats={handleStats}
+            onError={handleRenderError}
             aria-label={`${source.name} particle preview`}
           />
         </div>
