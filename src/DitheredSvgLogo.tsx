@@ -394,6 +394,7 @@ export function DitheredSvgLogo({
         window.addEventListener('resize', onResize);
         kick();
       } catch (error) {
+        if (cancelled) return;
         const normalizedError =
           error instanceof Error ? error : new Error('Failed to load SVG particle source.');
         onError?.(normalizedError);
