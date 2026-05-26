@@ -1,0 +1,34 @@
+name: Accessibility issue
+description: Report a barrier in the component, demo, controls, docs, or media.
+title: "[Accessibility]: "
+labels: ["accessibility"]
+body:
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Accessibility barrier
+      description: What was difficult or impossible to use?
+    validations:
+      required: true
+  - type: textarea
+    id: surface
+    attributes:
+      label: Surface
+      description: Component, demo control, docs page, media, or example.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, operating system, screen reader, reduced-motion setting, keyboard-only use, or other setup.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Steps or a minimal example that shows the barrier.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What would make this accessible?

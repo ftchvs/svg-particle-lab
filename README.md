@@ -100,6 +100,12 @@ type DitheredSvgStats = {
 - Filters hover work to mouse pointers; touch still gets click/tap shockwaves.
 - Snaps tiny displacements to zero so idle CPU returns to zero after motion.
 
+## Accessibility
+
+The component exposes an `aria-label` prop for the visual canvas. Accessibility
+expectations for labels, keyboard controls, reduced motion, and docs are in
+[ACCESSIBILITY.md](ACCESSIBILITY.md).
+
 ## Browser and SVG caveats
 
 - This is browser-only. It needs DOM, canvas, pointer events, and image loading.
